@@ -1,16 +1,15 @@
 import sys
 input = sys.stdin.readline
 
-N, M = map(int, input().split())
+t = int(input())
 
-arr = []
-for _ in range(N):
-    line = list(map(int, input().split()))
-    arr.append(line)
+arr_p =  [int(input()) for _ in range(t)]
 
-for _ in range(M):
-    x1, y1, x2, y2  = map(int, input().split())
-    cur_sum = 0
-    for j in range(x1 - 1, x2):
-        cur_sum += sum(arr[j][y1 -1 : y2])
-    print(cur_sum)
+for i in arr_p:
+    if i == 1:
+        print('1')
+    else:
+        if i %2 == 0:
+            print(-1)
+        else:
+            print(' '.join(['1', f'{i}'] + list(map(str, range(2, i)))))

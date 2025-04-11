@@ -1,0 +1,12 @@
+import sys
+input = sys.stdin.readline
+verbose = False
+
+N = int(input())
+M = int(input())
+
+arr = [[] for _ in range(N+1)]
+for _ in range(M):
+    u, v = map(int, input().split())
+    arr[u].append(v)
+    arr[v].append(u)

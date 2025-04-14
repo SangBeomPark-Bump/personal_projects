@@ -3,9 +3,7 @@ input = sys.stdin.readline
 verbose = False
 verboses = [True for _ in range(10)]
 
-N = int(input())
+M = int(input())
 S, P = map(int, input().split())
 dna = input()
 arr = list(map(int, input().split()))
-
-arr = [list(map(int, list(input().strip('\n')))) for _ in range(N)]

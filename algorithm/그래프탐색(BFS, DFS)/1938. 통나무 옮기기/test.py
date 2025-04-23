@@ -65,7 +65,7 @@ def dfs(start, is_stand):
     else:
         temp = arr_column_reduced
 
-    temp[y][x] = 0
+    temp[y][x] = 1
 
     while que:
         y, x, is_stand = que.popleft()
@@ -75,7 +75,7 @@ def dfs(start, is_stand):
             temp = arr_column_reduced
 
         if (y, x) == end and is_stand == is_end_stand:
-            return(temp[y][x])
+            return(temp[y][x]-1)
         dy = (-1, 1, 0, 0)
         dx = (0, 0, -1, 1)
         cur_num = temp[y][x]
@@ -95,9 +95,9 @@ def dfs(start, is_stand):
                 temp = arr_row_reduced
             else:
                 temp = arr_column_reduced
-                if not temp[y][x]:
-                    temp[y][x] = cur_num + 1 
-                    que.append((y, x, not is_stand))
+        if not temp[y][x]:
+            temp[y][x] = cur_num + 1 
+            que.append((y, x, not is_stand))
     return 0
 
 

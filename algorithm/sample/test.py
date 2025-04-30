@@ -4,7 +4,7 @@ verbose = False
 verboses = [False for _ in range(10)]
 
 N = int(input())
-S, P = map(int, input().split())
+N, M = map(int, input().split())
 X, *arr = map(int, input().split())
 
 dna = input()

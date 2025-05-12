@@ -7,7 +7,7 @@ N = int(input())
 N, M = map(int, input().split())
 X, *arr = map(int, input().split())
 
-dna = input()
+string = input()
 arr = list(map(int, input().split()))
 
 arr = [int(input()) for _ in range(N)]

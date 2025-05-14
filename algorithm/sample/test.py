@@ -7,7 +7,7 @@ N = int(input())
 N, M = map(int, input().split())
 X, *arr = map(int, input().split())
 
-string = input()
+string = input().strip('\n')
 arr = list(map(int, input().split()))
 
 arr = [int(input()) for _ in range(N)]

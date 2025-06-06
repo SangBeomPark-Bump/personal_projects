@@ -1,5 +1,7 @@
 import sys
 input = sys.stdin.readline
+verbose = False
+verboses = [False for _ in range(10)]
 INF = float("inf")
 
 N = int(input())
